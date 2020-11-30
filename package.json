@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/arasan-J/first-node-express-api#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "nodemon": "^2.0.6",
     "touch": "^3.1.0"
   }
