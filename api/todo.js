@@ -24,6 +24,19 @@ app.post("/", express.json(), (req, res) => {
     }
 });
 
+app.put("./:toDoId", express.json(), (req, res) => {
+    const { toDoId } = req.params;
+    if (toDos[+toDoId]) {
+        if(typeof req.body.text !== "undefined") {
+        toDos[+toDoId] = req.body.text;
+        res.json(toDos[+toDoId]);
+}  else {
+    res.status(400).json("You have to enter text.");
+} }
+else {
+    res.status(404).json("item not found!");
+}
+});
 
 
 module.exports = app;
