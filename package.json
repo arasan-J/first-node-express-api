@@ -1,0 +1,26 @@
+{
+  "name": "first-node-express-api",
+  "version": "1.0.0",
+  "description": "node and express api",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arasan-J/first-node-express-api.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "ExpressJS",
+    "REST",
+    "API"
+  ],
+  "author": "Arasan J",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arasan-J/first-node-express-api/issues"
+  },
+  "homepage": "https://github.com/arasan-J/first-node-express-api#readme"
+}
