@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
+const CORS = require("./cors");
 const port = 3000;
 
-app.use(morgan("dev"));
+app.use(morgan("combined"));
 
+app.use(CORS);
 app.get("/", (req, res) => {
     res.json("welcome to API server!");
     if(req.headers["user-agent"].toLowerCase().indexOf("postman") > -1){
