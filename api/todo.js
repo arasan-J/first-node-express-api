@@ -17,7 +17,11 @@ app.get("/:toDoId", (req, res) => {
 
 app.post("/", express.json(), (req, res) => {
     if(typeof req.body.text !== "undefined"){
+        if(toDos.indexOf(req.body.text) > -1) {
+            res.status(409).json("already exists");
+        } else {
         toDos.push(req.body.text);
+        }
         res.status(201).json(toDos.length - 1);
     } else {
         res.status(400).json("You have to enter text.");
