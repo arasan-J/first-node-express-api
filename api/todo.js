@@ -37,6 +37,15 @@ else {
     res.status(404).json("item not found!");
 }
 });
-
+app.delete("/:toDoId", (req, res) => {
+    const { toDoId } = req.params;
+    if (toDos[+toDoId]) {
+        toDos[+toDoId] = null;
+        res.status(204).json("");
+    }  
+    else {
+    res.status(404).json("todo item not found!");   
+    }
+});
 
 module.exports = app;
